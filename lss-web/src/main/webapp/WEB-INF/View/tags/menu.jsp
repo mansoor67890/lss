@@ -1,0 +1,1 @@
+<div align="center"><img src="${pageContext.request.contextPath}/resources/img/logo3.png" alt="LSS" id="logoimg"></div>

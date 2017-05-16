@@ -1,0 +1,54 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.1
+Created-By: 1.7.0_51-b13 (Oracle Corporation)
+Class-Path: lib/AbsoluteLayout.jar lib/DynamicJasper-3.1.9.jar lib/Ext
+ raFaxAPI.jar lib/JClock.jar lib/activation.jar lib/ansir_list.jar lib
+ /antlr-2.7.6.jar lib/aopalliance-1.0.jar lib/asm-attrs.jar lib/asm.ja
+ r lib/barbecue-1.5-beta1.jar lib/barcode4j-2.0.jar lib/batik-anim.jar
+  lib/batik-awt-util.jar lib/batik-bridge.jar lib/batik-css.jar lib/ba
+ tik-dom.jar lib/batik-ext.jar lib/batik-gvt.jar lib/batik-parser.jar 
+ lib/batik-script.jar lib/batik-svg-dom.jar lib/batik-svggen.jar lib/b
+ atik-util.jar lib/batik-xml.jar lib/bcel-5.2.jar lib/beansbinding-1.2
+ .1.jar lib/bsf-2.3.0.jar lib/bsh-2.0b4.jar lib/c3p0-0.9.1-pre6.jar li
+ b/cglib-2.1.3.jar lib/commons-beanutils-1.8.0.jar lib/commons-collect
+ ions-3.1.jar lib/commons-dbcp-1.4.jar lib/commons-digester-1.8.jar li
+ b/commons-javaflow-20060411.jar lib/commons-logging-1.0.4.jar lib/com
+ mons-pool-1.6.jar lib/db2jcc.jar lib/db2jcc_license_cu.jar lib/dom4j-
+ 1.6.1.jar lib/ehcache-1.2.3.jar lib/ejb3-persistence-3.3.1.jar lib/en
+ vers.jar lib/erphelp.jar lib/fhlaf_1.0b2_bin.jar lib/forms-1.2.0.jar 
+ lib/hamcrest-core-1.3.jar lib/hibernate-annotations-3.4.0.GA.jar lib/
+ hibernate-annotations.jar lib/hibernate-cglib-repack-2.1_3.jar lib/hi
+ bernate-commons-annotations.jar lib/hibernate-entitymanager.jar lib/h
+ ibernate-jpa-2.0-api-1.0.1.Final.jar lib/hibernate-tools-3.2.3.GA.jar
+  lib/hibernate-validator-4.0.2.GA.jar lib/hibernate-validator.jar lib
+ /hibernate3.jar lib/hsqldb-1.8.0-10.jar lib/hsviewer.jar lib/iReport.
+ jar lib/itext-1.3.6.jar lib/jasperreports-3.0.0.jar lib/javassist-3.1
+ 5.0-GA.jar lib/javassist-3.9.0.GA.jar lib/jaxen-1.1.1.jar lib/jcommon
+ -1.0.16.jar lib/jdbc2_0-stdext.jar lib/jdt-compiler-3.1.1.jar lib/jfr
+ eechart-1.0.13-experimental.jar lib/jfreechart-1.0.13-swt.jar lib/jfr
+ eechart-1.0.13.jar lib/jfreereport-misc-tablemodel-0.8.7.jar lib/jh.j
+ ar lib/jhall.jar lib/jhbasic.jar lib/jhindexer.jar lib/jhsearch.jar l
+ ib/jpa.jar lib/jsearch.jar lib/jta-1.1.jar lib/jta.jar lib/junit-4.11
+ .jar lib/jxl-2.6.10.jar lib/laf-plugin-50.jar lib/laf-widget.jar lib/
+ libfonts-0.1.4.jar lib/lipstikLF-1.1.jar lib/liquidlnf.jar lib/log4j-
+ 1.2.16.jar lib/mail.jar lib/mondrian-3.1.1.12687.jar lib/mysql-connec
+ tor-java-5.1.6-bin.jar lib/napkinlaf.jar lib/nimrodlf-1.0g.jar lib/oj
+ dbc14.jar lib/org-netbeans-modules-java-j2seproject-copylibstask.jar 
+ lib/org.springframework.aop-3.1.1.RELEASE.jar lib/org.springframework
+ .asm-3.1.1.RELEASE.jar lib/org.springframework.beans-3.1.1.RELEASE.ja
+ r lib/org.springframework.context-3.1.1.RELEASE.jar lib/org.springfra
+ mework.core-3.1.1.RELEASE.jar lib/org.springframework.expression-3.1.
+ 1.RELEASE.jar lib/org.springframework.jdbc-3.1.1.RELEASE.jar lib/org.
+ springframework.orm-3.1.1.RELEASE.jar lib/org.springframework.transac
+ tion-3.1.1.RELEASE.jar lib/org.springframework.web-3.1.1.RELEASE.jar 
+ lib/orsoncharts-1.0-eval.jar lib/orsonpdf-1.3-eval.jar lib/pixie-0.8.
+ 4.jar lib/png-encoder-1.5.jar lib/poi-3.0.1-FINAL.jar lib/quaqua.jar lib/rhin
+ o-1.7R1.jar lib/saaj-api-1.3.jar lib/sardaklaf.jar lib/serializer.jar
+  lib/servlet.jar lib/slf4j-api-1.6.0.jar lib/slf4j-jdk14-1.6.0.jar li
+ b/soap.jar lib/substance-swingx.jar lib/substance.jar lib/swingx-0.9.
+ 5.jar lib/swingx-beaninfo-0.9.5.jar lib/swtgraphics2d.jar lib/toniclf
+ .jar lib/wizard-0.1.12.jar lib/xalan-2.7.1.jar lib/xercesImpl-2.7.0.j
+ ar lib/xml-apis-ext.jar lib/xml-apis.jar
+X-COMMENT: Main-Class will be added automatically by build
+Main-Class: org.lss.erp.Main
+

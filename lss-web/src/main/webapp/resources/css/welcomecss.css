@@ -1,0 +1,71 @@
+@import url(http://db.onlinewebfonts.com/c/527ea5851ca62a9a758a44dc39437eae?family=Old+English+Text+MT);
+
+html, body{
+  height: 100%;
+  font-weight: 800;
+}
+
+body{
+  /*background: #000;
+  */font-family: Old English Text MT;
+}
+
+svg {
+    display: block;
+    font: 2.4em 'Old English Text MT';
+    width: 960px;
+    height: 310px;
+    margin: 0 auto;
+    
+}
+
+.text-copy {
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 2px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+    stroke: #31b7fd;
+ animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+ stroke: #97d4f4;
+ animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+ stroke: #14cbdb;
+ animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+ stroke: #4a94f0;
+ animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+ stroke: #31fbfd;
+ animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+ 100% {stroke-dashoffset: -35%;}
+}
+#s-text{
+ font: 18.5em;
+ }
+ 
+ a {
+    color: #fff;
+    text-decoration: none;
+    font-size: large;
+    font-family: courier;
+}
+a:focus, a:hover {
+     color: cyan;
+    text-decoration: none;
+}
