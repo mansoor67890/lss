@@ -256,7 +256,11 @@ function addInvoice() {
 	    	  }
 	      },
 	      error: function(returnedData) {
-	    	 // alert("error");
+	    	  toastr.error("Something went wrong. Please try again.", "Error!", {
+	              "timeOut": "3000",
+	              "progressBar": true,           
+	              "extendedTImeout": "0"
+	          });
 	      }
 	  });
   });

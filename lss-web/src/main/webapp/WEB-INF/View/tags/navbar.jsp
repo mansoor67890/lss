@@ -1,14 +1,19 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <style type="text/css">
-
+.img-responsive.center-block {
+	position: relative;
+	max-width: 50%;
+	margin-left: 50px;
+	/* margin-right: 20px; */
+}
 </style>
 
  		<div id="wrapper">
  <!-- Sidebar -->
         <div class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
 	        <div class="logo text-left">
-	               <img src="${pageContext.request.contextPath}/resources/img/lss-logo2-300.png" class="img-responsive center-block" alt="Logo" >
+	              <a href="${pageContext.request.contextPath}/dashboard"><img src="${pageContext.request.contextPath}/resources/img/lss-logo2-300.png" class="img-responsive center-block" alt="Logo" ></a>
 	               <br>
 	              <ul class="list">
 	                   <li class="dropdown" id="dlist">

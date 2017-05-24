@@ -33,12 +33,6 @@ package org.lss.erp.Controller;
 //		return new ModelAndView("403", "username", username);
 //	}
 //	
-//	@RequestMapping(value="/login?Error", method = RequestMethod.GET)
-//	public String loginerror(ModelMap model) {
-//	model.addAttribute("error", "true");
-//	return "login_page";
-//	 
-//	}
 //	
 //	@RequestMapping("/login")
 //	public ModelAndView login(@ModelAttribute User users,

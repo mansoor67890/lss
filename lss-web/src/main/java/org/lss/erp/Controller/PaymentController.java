@@ -153,4 +153,42 @@ public class PaymentController {
 		return model;
 	}
 	
+	@RequestMapping(value="/template/getpaidfeerecord/", method=RequestMethod.POST)
+	public ModelAndView paidFeeRecord(@RequestParam Date fromDate, @RequestParam Date toDate) {
+		ModelAndView model= new ModelAndView("_paidfeerecord");
+		model.addObject("payments", paymentDao.getPaidfeerecord(fromDate, toDate));
+		return model;
+	}
+	
+	@RequestMapping(value="/template/getunpaidfeerecord/", method=RequestMethod.POST)
+	public ModelAndView unPaidFeeRecord(@RequestParam Date fromDate, @RequestParam Date toDate) {
+		ModelAndView model= new ModelAndView("_unPaidfeerecord");
+		model.addObject("payments", paymentDao.getUnPaidfeerecord(fromDate, toDate));
+		return model;
+	}
+	
+	
+	@RequestMapping(value="/gettotalunpaidfeerecord/", method=RequestMethod.POST)
+	@ResponseBody
+	public int totalUnPaidFeeRecord(@RequestParam Date fromDate, @RequestParam Date toDate) {
+		List<Payments> payments= paymentDao.getUnPaidfeerecord(fromDate, toDate);
+		int count=0;
+		for(Payments obj: payments){
+			count+=obj.getAmountPaid();
+		}
+		return count;
+	}
+	
+	
+	@RequestMapping(value="/gettotalpaidfeerecord/", method=RequestMethod.POST)
+	@ResponseBody
+	public int totalPaidFeeRecord(@RequestParam Date fromDate, @RequestParam Date toDate) {
+		List<Payments> payments= paymentDao.getPaidfeerecord(fromDate, toDate);
+		int count=0;
+		for(Payments obj: payments){
+			count+=obj.getAmountPaid();
+		}
+		return count;
+	}
+	
 }

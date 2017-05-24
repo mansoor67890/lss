@@ -1,5 +1,6 @@
 package org.lss.erp.dao.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import org.hibernate.Criteria;
@@ -83,4 +84,27 @@ public class PaymentDaoImpl implements PaymentDao {
 		return list;
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Payments> getPaidfeerecord(Date fromDate, Date toDate) {
+		Session session= getHibernateSessionFactory().getCurrentSession();
+		Query query= session.createQuery("From Payments where invoice.date BETWEEN :fromDate AND :toDate and status=:status");
+		query.setParameter("fromDate", fromDate);
+		query.setParameter("toDate", toDate);
+		query.setParameter("status", true);
+		List<Payments> list=query.list();
+		return list;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Payments> getUnPaidfeerecord(Date fromDate, Date toDate) {
+		Session session= getHibernateSessionFactory().getCurrentSession();
+		Query query= session.createQuery("From Payments where invoice.date BETWEEN :fromDate AND :toDate and status=:status");
+		query.setParameter("fromDate", fromDate);
+		query.setParameter("toDate", toDate);
+		query.setParameter("status", false);
+		List<Payments> list=query.list();
+		return list;
+	}
 }

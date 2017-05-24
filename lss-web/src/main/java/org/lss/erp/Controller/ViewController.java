@@ -7,8 +7,10 @@ import org.lss.erp.dao.dao.StudentDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 /*
@@ -91,8 +93,23 @@ public class ViewController {
 
 	
 	@RequestMapping(value="/login",method=RequestMethod.GET)
-	public String login() {
-		return "login";
+	public ModelAndView login(@RequestParam(value = "error", required = false) String error,
+			@RequestParam(value = "logout", required = false) String logout) {
+
+		ModelAndView model = new ModelAndView();
+		if (error != null) {
+			model.addObject("error", "1");
+			model.addObject("msg", "Invalid username or password!");
+		}
+
+		if (logout != null) {
+			model.addObject("logout", "1");
+			model.addObject("logoutMsg", "You've been logged out successfully.");
+		}
+		model.setViewName("login");
+
+		return model;
+
 	}
 	
 	@RequestMapping(value="/dashboard",method=RequestMethod.GET)
@@ -101,7 +118,14 @@ public class ViewController {
 		model.addObject("studentCount", studentDao.countAllStudents());
 		return model;
 	}
-
+	
+//	@RequestMapping(value="/login?error", method = RequestMethod.GET)
+//	public Model loginerror(Model model) {
+//	model.addAttribute("error", "Email or password is not correct!");
+//	return model;
+//	 
+//	}
+	
 	protected ModelAndView handleRequestInternal(HttpServletRequest  request, HttpServletResponse arg1) 
 					throws Exception {
 		if (request.isUserInRole("ROLE_USER")) {

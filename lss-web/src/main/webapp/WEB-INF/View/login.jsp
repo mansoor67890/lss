@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="en">
 <head>
 <title>Lahore School System</title>
@@ -6,42 +7,14 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/tether.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/toastr.min.js"></script>
 <link rel="stylesheet" type="text/css" href="lssc.css">
 
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/original-bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/lssc.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/toastr.min.css">
 
 <style>
-.modal-loading {
-	display: none;
-	position: fixed;
-	z-index: 1000;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: rgba(255, 255, 255, .8)
-		url('http://i.stack.imgur.com/FhHRx.gif') 50% 50% no-repeat;
-}
-
-/* When the body has the loading class, we turn
-   the scrollbar off with overflow:hidden */
-body.loading {
-	overflow: hidden;
-}
-
-/* Anytime the body has the loading class, our
-   modal element will be visible */
-body.loading .modal-loading {
-	display: block;
-}
-
-.modal-footer-mine {
-	padding: 15px;
-	text-align: center;
-	border-top: 1px solid #e5e5e5;
-}
-
 .redBorder {
 	border-color: red;
 }
@@ -67,7 +40,7 @@ body.loading .modal-loading {
 									<div class="input-group">
 											<span class="input-group-addon"> <i
 												class="glyphicon glyphicon-user"></i>
-											</span> <input class="form-control" placeholder="Email" name="email" type="text" id=""
+											</span> <input class="form-control" placeholder="Email" name="email" type="text" id="email"
 												autofocus data-toggle="tooltip" data-placement="bottom" title="Enter Email">
 									</div>
 								</div>
@@ -90,6 +63,30 @@ body.loading .modal-loading {
 							</div>
 						</div>
 					</form>
+
+					<c:choose>
+						<c:when test="${not empty error}">
+							<script type="text/javascript">
+								toastr.error("${msg}", "Error!", {
+									"timeOut" : "3000",
+									"progressBar" : true,
+									"extendedTImeout" : "0"
+								});
+							 </script>
+						</c:when>
+						
+						<c:when test="${not empty logout}">
+							<script type="text/javascript">
+								toastr.warning("${logoutMsg}", "", {
+									"timeOut" : "3000",
+									"progressBar" : true,
+									"extendedTImeout" : "0"
+								});
+							 </script>
+						</c:when>
+						
+					</c:choose>
+
 				</section>
 			</div>
 		</div>
@@ -111,30 +108,30 @@ body.loading .modal-loading {
 		});
 
 		function myFunction() {
-			//alert($('#clickme').val().length);
 			if ($('#email').val() == "") {
-				// var elId=element.attr('loginname');
 				$('#email').addClass("redBorder");
-				$('#logincheck')
-						.html(
-								'<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Warning!</strong> Username is required</div>');
+				toastr.error("Please enter email address.", "Error!", {
+		              "timeOut": "3000",
+		              "progressBar": true,           
+		              "extendedTImeout": "0"
+		          });
 				return false;
 			} else if ($('#password').val() == "") {
 				$('#password').addClass("redBorder");
-				$('#logincheck')
-						.html(
-								'<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Warning!</strong> Password is required</div>');
+				toastr.error("Please Enter the password.", "Error!", {
+		              "timeOut": "3000",
+		              "progressBar": true,           
+		              "extendedTImeout": "0"
+		          });
 				return false;
 			} else {
-
-				$('#logincheck').html("");
 				return true;
-
 			}
 		}
 		$("input").focus(function() {
 			$('#' + this.id).removeClass("redBorder");
 		});
+
 	</script>
 </body>
 </html>

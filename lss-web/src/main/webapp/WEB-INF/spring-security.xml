@@ -27,11 +27,11 @@
 			pattern="/user/**" access="hasRole('ROLE_USER')" /> -->
 		<intercept-url pattern="/loginError.jsp" access="permitAll" />
 		<access-denied-handler error-page="/403" />
-		<form-login login-page="/login" authentication-failure-url="/login"
+		<form-login login-page="/login" authentication-failure-url="/login?error=1"
 			username-parameter="email" password-parameter="password"
 			authentication-success-handler-ref="myAuthenticationSuccessHandler"
 			always-use-default-target="true" />
-		<logout logout-success-url="/login" />
+		<logout logout-success-url="/login?logout=1" />
 
 	</http>
 	<authentication-manager alias="authenticationManager">

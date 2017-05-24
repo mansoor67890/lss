@@ -172,8 +172,6 @@
   </div>
 </div>
 
-
-<!-- Cross button of Form -->
 <script type="text/javascript">
 
 $("#studentPaymentTable").dataTable();
@@ -235,14 +233,4 @@ $("#findByClass,#findBySection").change(function() {
 		      }
 		  });
 	});
-	
-	/* $('.toastrCheck').click(function(){
-		toastr.success("Yesssss!!!", "Title", {
-            "timeOut": "3000",
-            "progressBar": true,           
-            "extendedTImeout": "0"
-        });
-	}); */
-	
-	
 </script>

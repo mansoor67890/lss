@@ -96,8 +96,8 @@
 												data-toggle="tooltip" data-placement="bottom"
 												title="Select Paid / Unpaid Status" required>
 												<option value="">Select Status</option>
-												<option value="1">Paid</option>
-												<option value="0">Unpaid</option>
+												<option ${payment.status == '1' ? 'selected' : ''} value="1">Paid</option>
+												<option ${payment.status == '0' ? 'selected' : ''} value="0">Unpaid</option>
 											</select>
 										</div>
 									</td>

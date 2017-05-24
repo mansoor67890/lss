@@ -117,8 +117,8 @@
 						<label for="date" class="col-sm-3 control-label">Date of
 							Birth</label>
 						<div class="col-sm-8">
-							<input type="date" class="form-control" id="dob" name="dob" required readonly
-								data-toggle="tooltip" data-placement="bottom" title="Enter Date of Birth">
+							<input type="date" class="form-control" id="dob" name="dob" readonly
+								data-toggle="tooltip" data-placement="bottom" title="Select Date of Birth">
 						</div>
 					</div>
 					<div class="form-group">

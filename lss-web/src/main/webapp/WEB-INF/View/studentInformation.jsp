@@ -100,9 +100,7 @@
 
 <script type="text/javascript">
 	
-  
   $("#searchStudentBtn").click(function (){
-	  
 	  var data= {
 			  "searchField": $("#searchStudentField").val(),
 			  "searchBy": $("input[name='searchBy']:checked").val()
@@ -132,8 +130,5 @@
 	      }
 	  });
   });
-  
-  
-  
   </script>
 

@@ -1,5 +1,6 @@
 package org.lss.erp.dao.dao;
 
+import java.util.Date;
 import java.util.List;
 
 import org.lss.erp.entity.Payments;
@@ -19,5 +20,6 @@ public interface PaymentDao {
 	public List<Payments> findPaymentsForAllSections(String classId);
 	public List<Payments> findPaymentsForAllClasses(String sectionId);
 	public List<Payments> findPaymentsHistoryForStudent(int studentId);
-	
+	public List<Payments> getPaidfeerecord(Date fromDate, Date toDate);
+	public List<Payments> getUnPaidfeerecord(Date fromDate, Date toDate);
 }
