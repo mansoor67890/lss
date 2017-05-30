@@ -3,7 +3,6 @@
 <style>
 
 .popup {
-	zoom:0.5;
 	position:relative;
 	text-decoration:none;
 }
@@ -23,8 +22,9 @@
 	border:2px solid #000;
 	border-radius:4px;
 	left:-999em;q
-	z-index:990;
+	z-index:1020;
 }
+
 .popup:hover {visibility:visible}
 .popup:hover span {left:350px;}
 * html .popup span {position:absolute;}
@@ -158,12 +158,10 @@ $("#allStudentsTable").dataTable();
 
 $('#allStudentsTable tbody').on('click', '.editStudent', function () {
  var id=this.id;
- //alert(id);
  $.ajax({
       type: "GET",
       url: "${pageContext.request.contextPath}/editstudent/"+id,
       success: function(returnedData) {
-    	 // alert(returnedData);
     	  $("#editStudentModalDiv").html(returnedData);
     	  $("#editStudentModal").modal("show");
       },
@@ -179,7 +177,6 @@ $('#allStudentsTable tbody').on('click', '.deleteStudent', function () {
 	$("#modaldelete").modal('show');
 		$("#deleteModalBtn").click(function(e) {
 			e.preventDefault();
-			//alert("del this: "+ id);
 			deleteStudent(id);
 		});
 	});
@@ -190,12 +187,15 @@ $('#allStudentsTable tbody').on('click', '.deleteStudent', function () {
 	      type: "GET",
 	      url: "${pageContext.request.contextPath}/deletestudent/"+id,
 	      success: function(returnedData) {
-	    	 // alert(returnedData);
 	    	  $("#delResponseBody").html(returnedData);
 	    	  $("#deleteResponseModal").modal("show");
 	      },
 	      error: function(returnedData) {
-	    	 alert("error");
+	    	  toastr.error("Something went wrong.", "Error!", {
+	              "timeOut": "3000",
+	              "progressBar": true,           
+	              "extendedTImeout": "0"
+	          });
 	      }
 	  });
 	}

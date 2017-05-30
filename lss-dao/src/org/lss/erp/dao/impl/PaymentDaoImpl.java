@@ -17,11 +17,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author Mansoor Ahmed
+ * @version 1.0
  * 
  */
 
 @Component
 @Transactional
+@SuppressWarnings("unchecked")
 public class PaymentDaoImpl implements PaymentDao {
 
 	@Autowired
@@ -44,7 +46,6 @@ public class PaymentDaoImpl implements PaymentDao {
 		return (PaymentsType) crit.list().get(0);
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public List<Payments> findPaymentsByClassNameAndSection(String classId, String sec) {
 		Session session= getHibernateSessionFactory().getCurrentSession();
@@ -84,7 +85,6 @@ public class PaymentDaoImpl implements PaymentDao {
 		return list;
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public List<Payments> getPaidfeerecord(Date fromDate, Date toDate) {
 		Session session= getHibernateSessionFactory().getCurrentSession();
@@ -96,7 +96,6 @@ public class PaymentDaoImpl implements PaymentDao {
 		return list;
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public List<Payments> getUnPaidfeerecord(Date fromDate, Date toDate) {
 		Session session= getHibernateSessionFactory().getCurrentSession();

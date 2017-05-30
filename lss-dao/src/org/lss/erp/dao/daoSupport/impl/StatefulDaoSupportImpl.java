@@ -11,9 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- * @author 
- */
 @Component
 @Transactional
 public class StatefulDaoSupportImpl implements StatefulDaoSupport{
@@ -31,40 +28,34 @@ public class StatefulDaoSupportImpl implements StatefulDaoSupport{
 
 	@Override
 	public void save(Object entity) {
-		// TODO Auto-generated method stub
 		getHibernateSessionFactory().getCurrentSession().save(entity);
 		
 	}
 
 	@Override
 	public void merge(Object entity) {
-		// TODO Auto-generated method stub 
 		getHibernateSessionFactory().getCurrentSession().merge(entity);
 	}
 
 	@Override
 	public void saveOrUpdate(Object entity) {
-		// TODO Auto-generated method stub
 		getHibernateSessionFactory().getCurrentSession().saveOrUpdate(entity);
 	}
 
 	@Override
 	public void delete(Object entity) {
-		// TODO Auto-generated method stub
 		getHibernateSessionFactory().getCurrentSession().delete(entity);
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
 	public <T> T findById(Class<T> type, int id) {
-		// TODO Auto-generated method stub
 		return  (T) getHibernateSessionFactory().getCurrentSession().get(type, id);
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
 	public <T> List<T> findAll(Class<T> type) {
-		// TODO Auto-generated method stub 
 		Criteria crit=getHibernateSessionFactory().getCurrentSession().createCriteria(type);
 		return crit.list();
 	}

@@ -59,7 +59,11 @@ $(".takePayment").click(function (){
 	    	  //alert(res);
 	      },
 	      error: function() {
-	    	// alert("error");
+	    	  toastr.error("Something went wrong.", "Error!", {
+	              "timeOut": "3000",
+	              "progressBar": true,           
+	              "extendedTImeout": "0"
+	          });
 	      }
 	  });
 });

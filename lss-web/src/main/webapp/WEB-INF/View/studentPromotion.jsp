@@ -96,8 +96,6 @@
 </div>
 
 
-
-
 <script type="text/javascript">
 
 $("#PromoteStudentsBtn").click(function(){
@@ -135,6 +133,4 @@ function getStudents(className, sectionName){
 	      }
 	  });
 	}
-
-
 </script>

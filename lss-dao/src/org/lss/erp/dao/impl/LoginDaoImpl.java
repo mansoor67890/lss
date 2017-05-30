@@ -2,9 +2,7 @@ package org.lss.erp.dao.impl;
 
 import java.util.List;
 
-import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
-import org.hibernate.criterion.Restrictions;
 import org.lss.erp.dao.dao.LoginDao;
 import org.lss.erp.entity.User;
 import org.lss.erp.entity.UserRole;
@@ -12,6 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+/**
+ * @author Mansoor Ahmed
+ * @version 1.0
+ * 
+ */
 
 @Component
 @Transactional

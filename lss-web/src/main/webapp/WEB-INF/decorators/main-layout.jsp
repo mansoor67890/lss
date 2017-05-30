@@ -8,9 +8,7 @@
 <title>Test Application</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
-<%--
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/custom.js"></script>
- --%>
+
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/tether.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
@@ -22,7 +20,6 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/custom.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/toastr.min.js"></script>
 
-<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet"> -->
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/admitformcss.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/lssc.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/dashboard.css">
@@ -45,6 +42,5 @@
 		</div>
 	</div>
 	<br><br><br>
-	<%-- <c:import url="/WEB-INF/View/tags/footer.jsp" /> --%>
 </body>
 </html>

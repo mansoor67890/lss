@@ -16,8 +16,4 @@
 		<pattern>/*</pattern>
 	</decorator>
 	
-	
-	<decorator name="template" page="template-layout.jsp">
-	</decorator>
-	
 </decorators>

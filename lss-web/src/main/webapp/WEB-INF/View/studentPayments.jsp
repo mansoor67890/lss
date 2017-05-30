@@ -192,10 +192,13 @@ $("#findByClass,#findBySection").change(function() {
 	      url: "${pageContext.request.contextPath}/getpaymentbyclass/"+classId +"/"+ section,
 	      success: function(msg) {
 	    	  $("#studentPaymentTableDiv").html(msg);
-	    	  //alert(msg);
 	      },
 	      error: function(returnedData) {
-	    	// alert("error");
+	    	  toastr.error("Something went wrong.", "Error!", {
+	              "timeOut": "3000",
+	              "progressBar": true,           
+	              "extendedTImeout": "0"
+	          });
 	      }
 	  });
 	}); 
@@ -207,12 +210,15 @@ $("#findByClass,#findBySection").change(function() {
 		      type: "GET",
 		      url: "${pageContext.request.contextPath}/takepayment/"+paymentId,
 		      success: function(res) {
-		    	 // alert(res);
 		    	  $("#paymentModalDiv").html(res);
 		    	  $("#takePaymentModal").modal("show");
 		      },
 		      error: function() {
-		    	// alert("error");
+		    	  toastr.error("Something went wrong.", "Error!", {
+		              "timeOut": "3000",
+		              "progressBar": true,           
+		              "extendedTImeout": "0"
+		          });
 		      }
 		  });
 	});
@@ -224,12 +230,15 @@ $("#findByClass,#findBySection").change(function() {
 		      type: "GET",
 		      url: "${pageContext.request.contextPath}/viewpaymentshistory/"+studentId,
 		      success: function(res) {
-		    	 // alert(res);
 		    	  $("#paymentHistoryModalDiv").html(res);
 		    	  $("#paymentHistoryModal").modal("show");
 		      },
 		      error: function() {
-		    	// alert("error");
+		    	  toastr.error("Something went wrong.", "Error!", {
+		              "timeOut": "3000",
+		              "progressBar": true,           
+		              "extendedTImeout": "0"
+		          });
 		      }
 		  });
 	});

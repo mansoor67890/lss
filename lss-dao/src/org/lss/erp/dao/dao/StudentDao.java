@@ -2,9 +2,15 @@ package org.lss.erp.dao.dao;
 
 import java.util.List;
 
-import org.lss.erp.entity.Payments;
 import org.lss.erp.entity.Student;
 import org.springframework.stereotype.Component;
+
+
+/**
+ * @author Mansoor Ahmed
+ * @version 1.0
+ * 
+ */
 
 @Component
 public interface StudentDao {

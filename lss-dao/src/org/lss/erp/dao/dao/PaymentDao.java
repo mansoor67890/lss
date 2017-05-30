@@ -7,8 +7,10 @@ import org.lss.erp.entity.Payments;
 import org.lss.erp.entity.PaymentsType;
 import org.springframework.stereotype.Component;
 
+
 /**
  * @author Mansoor Ahmed
+ * @version 1.0
  * 
  */
 

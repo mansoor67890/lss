@@ -245,12 +245,4 @@ $('#totalPaidFeeBtn').click(function(){
 	 }
 });
  
- 
- 
- 
- 
- 
- 
- 
-
 </script>

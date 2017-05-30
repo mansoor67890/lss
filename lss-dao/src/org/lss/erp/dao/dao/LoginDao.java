@@ -6,10 +6,11 @@ import org.lss.erp.entity.User;
 import org.lss.erp.entity.UserRole;
 import org.springframework.stereotype.Component;
 
+
 /**
+ * @author Mansoor Ahmed
+ * @version 1.0
  * 
- * @author Mansoor Ahmed <mansoor67890@gmail.com>
- *
  */
 @Component
 public interface LoginDao {

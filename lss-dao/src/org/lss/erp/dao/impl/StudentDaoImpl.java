@@ -9,11 +9,16 @@ import org.hibernate.classic.Session;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 import org.lss.erp.dao.dao.StudentDao;
-import org.lss.erp.entity.Payments;
 import org.lss.erp.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+
+/**
+ * @author Mansoor Ahmed
+ * @version 1.0
+ * 
+ */
 
 @Component
 @Transactional

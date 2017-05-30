@@ -1,6 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <div id="paidfeerecordform">
-
 	<div class="container">
 		<div class="col-md-2"></div>
 		<div class="col-md-9">
@@ -130,4 +129,3 @@
 	 });
 	 
 </script>
-

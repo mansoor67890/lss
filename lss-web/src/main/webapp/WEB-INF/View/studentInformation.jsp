@@ -105,8 +105,6 @@
 			  "searchField": $("#searchStudentField").val(),
 			  "searchBy": $("input[name='searchBy']:checked").val()
 	  };
-	 // data = JSON.stringify(data, null, '\t');
-	// alert(data);
 	  
 	  $.ajax({
 	      type: "POST",
@@ -122,11 +120,19 @@
 	 	    		  $("#studentTable").html("<tr><td>"+value.rollNumber+"</td><td>"+value.name+"</td><td>"+value.studentClass+"</td><td>"+value.section+"</td><td>"+value.address+"</td>");
 	 	    	  });
 	    	  }else {
-	    		  $("#errorMsg").html("<div class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Oops!&nbsp;</strong> No student found.</div>");
+	    		  toastr.error("No Record found.", "Error!", {
+		              "timeOut": "3000",
+		              "progressBar": true,           
+		              "extendedTImeout": "0"
+		          });
 	    	  }
 	      },
 	      error: function(returnedData) {
-	    	 // alert("error");
+	    	  toastr.error("Something went wrong.", "Error!", {
+	              "timeOut": "3000",
+	              "progressBar": true,           
+	              "extendedTImeout": "0"
+	          });
 	      }
 	  });
   });

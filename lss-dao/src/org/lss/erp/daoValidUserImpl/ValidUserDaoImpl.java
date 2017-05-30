@@ -9,6 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+/**
+ * @author Mansoor Ahmed
+ * @version 1.0
+ * 
+ */
+
 @Component
 @Transactional
 public class ValidUserDaoImpl implements ValidUserDao {
@@ -36,20 +42,7 @@ public class ValidUserDaoImpl implements ValidUserDao {
 		Query query = session.createQuery(qry);
 		query.setParameter("username", username);
 		User emp1=(User) query.list().get(0);
-//		emp1.getUserRole();
 		return emp1;
 	}
 	
-//	 @SuppressWarnings("deprecation")
-//	    @Override
-//	    public UserDetails loadUserByUsername(String username)
-//	            throws UsernameNotFoundException, DataAccessException
-//	    {
-//	        System.out.println("Getting access details from employee dao !!");
-//	        // Ideally it should be fetched from database and populated instance of
-//	        // #org.springframework.security.core.userdetails.User should be returned from this method
-//	        UserDetails user= new User("User", "abc", (Collection<? extends GrantedAuthority>) new GrantedAuthorityImpl("ROLE_USER"));
-////	        UserDetails user = new User(username, "password", true, true, true, true, new GrantedAuthority[]{ new GrantedAuthorityImpl("ROLE_USER") });
-//	        return user;
-//	    }
 }

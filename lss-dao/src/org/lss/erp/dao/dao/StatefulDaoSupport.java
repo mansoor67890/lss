@@ -5,9 +5,6 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-/**
- * @author 
- */
 @Component
 public interface StatefulDaoSupport{ 
 	
